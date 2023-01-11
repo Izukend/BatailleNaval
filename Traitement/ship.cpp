@@ -10,14 +10,7 @@
 
 using namespace std;
 
-struct Ship {
-    string name;
-    int x;
-    int y;
-    int length;
-};
-
-int spawn(Ship *ship) {
+void spawn(Ship *ship) {
     random_device rd;
     mt19937 mt(rd());
     uniform_real_distribution<double> dist(0, nextafter(10, DBL_MAX));
@@ -43,8 +36,6 @@ int spawn(Ship *ship) {
     }
     for (int j = 0; j < ship->length; ++j)
         board[ship->x + (row ? j : 0)][ship->y + (row ? 0 : j)] = '1';
-
-    return 0;
 
     //Ship cruiser{"Porte-Avions", static_cast<int>(dist(mt)), static_cast<int>(dist(mt)), 3};
 

@@ -8,14 +8,6 @@
 
 using namespace std;
 
-struct Bateaux {
-    string name;
-    int x;
-    int y;
-    int pv;
-    int id;
-};
-
 int main() {
     cout << "\n"
             " /$$   /$$                              /$$       /$$$$$$$             /$$     /$$     /$$          \n"
@@ -43,11 +35,14 @@ int main() {
                 "                               " << endl;
 
 
-        Ship Bateaux{"test",0,0,0};
-        spawn();
+        Ship* cruiser = static_cast<Ship *>(malloc(sizeof(Ship)));
+        cruiser->name = "Porte-Avion";
+        cruiser->length = 3;
+        spawn(cruiser);
         show();
 
     } else if (play == "no" || play == "n") {
-        cout << "Merci d'avoir jouer !" << endl;
+        cout << "Merci d'avoir jouer !" <<
+             endl;
     }
 }
