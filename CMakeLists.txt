@@ -3,4 +3,4 @@ project(BatailleNaval)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(BatailleNaval main.cpp main.h Traitement/Plateaux.cpp)
+add_executable(BatailleNaval main.cpp main.h Traitement/board.cpp Traitement/ship.cpp)

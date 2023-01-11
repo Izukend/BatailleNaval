@@ -55,8 +55,14 @@ build CMakeFiles/BatailleNaval.dir/main.cpp.obj: CXX_COMPILER__BatailleNaval_Deb
   OBJECT_DIR = CMakeFiles\BatailleNaval.dir
   OBJECT_FILE_DIR = CMakeFiles\BatailleNaval.dir
 
-build CMakeFiles/BatailleNaval.dir/Traitement/Plateaux.cpp.obj: CXX_COMPILER__BatailleNaval_Debug C$:/Users/izuke/CLionProjects/BatailleNaval/Traitement/Plateaux.cpp || cmake_object_order_depends_target_BatailleNaval
-  DEP_FILE = CMakeFiles\BatailleNaval.dir\Traitement\Plateaux.cpp.obj.d
+build CMakeFiles/BatailleNaval.dir/Traitement/board.cpp.obj: CXX_COMPILER__BatailleNaval_Debug C$:/Users/izuke/CLionProjects/BatailleNaval/Traitement/board.cpp || cmake_object_order_depends_target_BatailleNaval
+  DEP_FILE = CMakeFiles\BatailleNaval.dir\Traitement\board.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\BatailleNaval.dir
+  OBJECT_FILE_DIR = CMakeFiles\BatailleNaval.dir\Traitement
+
+build CMakeFiles/BatailleNaval.dir/Traitement/ship.cpp.obj: CXX_COMPILER__BatailleNaval_Debug C$:/Users/izuke/CLionProjects/BatailleNaval/Traitement/ship.cpp || cmake_object_order_depends_target_BatailleNaval
+  DEP_FILE = CMakeFiles\BatailleNaval.dir\Traitement\ship.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\BatailleNaval.dir
   OBJECT_FILE_DIR = CMakeFiles\BatailleNaval.dir\Traitement
@@ -69,7 +75,7 @@ build CMakeFiles/BatailleNaval.dir/Traitement/Plateaux.cpp.obj: CXX_COMPILER__Ba
 #############################################
 # Link the executable BatailleNaval.exe
 
-build BatailleNaval.exe: CXX_EXECUTABLE_LINKER__BatailleNaval_Debug CMakeFiles/BatailleNaval.dir/main.cpp.obj CMakeFiles/BatailleNaval.dir/Traitement/Plateaux.cpp.obj
+build BatailleNaval.exe: CXX_EXECUTABLE_LINKER__BatailleNaval_Debug CMakeFiles/BatailleNaval.dir/main.cpp.obj CMakeFiles/BatailleNaval.dir/Traitement/board.cpp.obj CMakeFiles/BatailleNaval.dir/Traitement/ship.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\BatailleNaval.dir

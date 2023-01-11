@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include <algorithm>
+#include <random>
 #include "./main.h"
 
 using namespace std;
@@ -25,8 +26,7 @@ int main() {
             "| $$\\  $$$ /$$__  $$  \\  $$$/ /$$__  $$| $$      | $$  \\ $$/$$__  $$  | $$ /$$| $$ /$$| $$| $$_____/\n"
             "| $$ \\  $$|  $$$$$$$   \\  $/ |  $$$$$$$| $$      | $$$$$$$/  $$$$$$$  |  $$$$/|  $$$$/| $$|  $$$$$$$\n"
             "|__/  \\__/ \\_______/    \\_/   \\_______/|__/      |_______/ \\_______/   \\___/   \\___/  |__/ \\_______/\n"
-            "                                                                                                    \n"
-            "By Coulais Tom, Bidard Adeline and Dasilva-Fernandez Enzo."
+            "By Coulais Tom, Bidard Adeline and Dasilva-Fernandez Enzo, s/o F1D0"
             "                                                            \n" << endl;
     cout << "Play ? (Yes or No)" << endl;
     string play;
@@ -42,11 +42,10 @@ int main() {
                 "2 Contre Torpilleurs(3 cases) ; 1 Croiseur(4 cases) ; 1 Porte Avions(5 cases) ; 1 Torpilleur(2 cases)"
                 "                               " << endl;
 
-        //Définition du Porte-avions
-        Bateaux PorteAvions{"Porte-Avions", 4, 5, 5, 3};
-        tab[PorteAvions.x][PorteAvions.y] = '1';
-        show();
 
+        Ship Bateaux{"test",0,0,0};
+        spawn();
+        show();
 
     } else if (play == "no" || play == "n") {
         cout << "Merci d'avoir jouer !" << endl;
