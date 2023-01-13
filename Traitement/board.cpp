@@ -2,16 +2,16 @@
 // Created by izukend on 10/01/2023.
 //
 #include <iostream>
-
 #define SIZE 10
 
-char board[10][10];
+using namespace std;
+char plateau[10][10];
 int i, j;
 
-void init() {
+void initialisation() {
     for (i = 0; i < SIZE; ++i) {
         for (j = 0; j < SIZE; ++j)
-            board[i][j] = '~';
+            plateau[i][j] = '~';
     }
 }
 
@@ -25,10 +25,9 @@ void show() {
     for (i = 0; i < 10; i++) {
         printf("%2d", i + 1);
         for (j = 0; j < 10; j++) {
-            //printf("%4c", board[i][j] == '1' ? '~' : board[i][j]); remettre quand c fini
-            printf("%4c", board[i][j]);
+            printf("%4c", plateau[i][j]);
         }
-        printf("\n");
+        cout << " " << endl;
     }
     printf("-----------------------------------------------\n");
 }

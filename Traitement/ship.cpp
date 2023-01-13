@@ -2,53 +2,66 @@
 // Created by izukend on 10/01/2023.
 //
 #include <iostream>
-#include <random>
-#include <cfloat>
-#include <cmath>
-
 #include "../main.h"
 
 using namespace std;
 
-void spawn(Ship *ship) {
-    random_device rd;
-    mt19937 mt(rd());
-    uniform_real_distribution<double> dist(0, nextafter(10, DBL_MAX));
+void plateaux_1(){
+    Ship croiseur{"Croiseur", 5, 4, 4};
+    Ship porte_avions{"Porte-Avions", 2, 1, 5};
+    Ship torpilleur{"Torpilleur", 5, 7, 2};
+    Ship contre_torpilleur_1{"Contre_Torpilleur", 3, 6, 3};
+    Ship  contre_torpilleur_2{"Torpilleur", 7, 1, 3};
 
-    int i = 0;
-    int x = static_cast<int>(dist(mt)), y = static_cast<int>(dist(mt));
-    bool row = true;
-    while (i < ship->length) {
-        if (row) {
-            if (board[x + i][y] == '1') {
-                x = static_cast<int>(dist(mt));
-                y = static_cast<int>(dist(mt));
-                i = 0;
-                row = false;
-            }
-        } else {
-            if (board[x][y + i] == '1') {
-                i = 0;
-                row = true;
-            }
-        }
-        i++;
+    /**
+     * @brief Initialisation des bateaux sur la grille
+     */
+     //Initialisation du croiseur
+    for (int i = 0; i< 4; i++){
+        plateau[croiseur.x + i][croiseur.y] ='1';
     }
-    for (int j = 0; j < ship->length; ++j)
-        board[ship->x + (row ? j : 0)][ship->y + (row ? 0 : j)] = '1';
-
-    //Ship cruiser{"Porte-Avions", static_cast<int>(dist(mt)), static_cast<int>(dist(mt)), 3};
-
-    //while (i < 5) {
-    /*if (board[cruiser.x][cruiser.y] != board[cruiser.x][9]) {
-        for (int j = 0; j < 5; ++j) {
-            board[cruiser.x + j][cruiser.y] = '1';
-        }
-    } else {
-        for (int j = 0; j < 5; ++j) {
-            board[cruiser.x][cruiser.y + j] = '1';
-        }
+    //Initialisation du porte_avions
+    for (int i = 0; i < 5 ; ++i) {
+        plateau[porte_avions.x][porte_avions.y +i] = '1';
     }
-    //}*/
+    for (int i = 0; i < 2; i++){
+        plateau[torpilleur.x][torpilleur.y + i] = '1';
+    }
+    for (int i = 0; i < 3; ++i) {
+        plateau[contre_torpilleur_1.x][contre_torpilleur_1.y + i] = '1';
+    }
+    for (int i = 0; i < 3; ++i) {
+        plateau[contre_torpilleur_2.x + i][contre_torpilleur_2.y] ='1';
+    }
 }
+void plateaux_2(){
+    Ship croiseur{"Croiseur", 2, 3, 4};
+    Ship porte_avions{"Porte-Avions", 4, 5, 5};
+    Ship torpilleur{"Torpilleur", 1, 5, 2};
+    Ship contre_torpilleur_1{"Contre_Torpilleur", 0, 0, 3};
+    Ship  contre_torpilleur_2{"Torpilleur", 7, 1, 3};
+
+    /**
+     * @brief Initialisation des bateaux sur la grille
+     */
+    //Initialisation du croiseur
+    for (int i = 0; i< 4; i++){
+        plateau[croiseur.x + i][croiseur.y] ='1';
+    }
+    //Initialisation du porte_avions
+    for (int i = 0; i < 5 ; ++i) {
+        plateau[porte_avions.x][porte_avions.y +i] = '1';
+    }
+    for (int i = 0; i < 2; i++){
+        plateau[torpilleur.x][torpilleur.y + i] = '1';
+    }
+    for (int i = 0; i < 3; ++i) {
+        plateau[contre_torpilleur_1.x][contre_torpilleur_1.y + i] = '1';
+    }
+    for (int i = 0; i < 3; ++i) {
+        plateau[contre_torpilleur_2.x + i][contre_torpilleur_2.y] ='1';
+    }
+}
+
+
 

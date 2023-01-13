@@ -16,19 +16,23 @@ struct Ship {
 /**
  * @brief Matrice contenant le plateau
  */
-extern char board[10][10];
+extern char plateau[10][10];
 
 /**
  * @brief Création de la grille de base du jeu composée de ~ pour l'eau
  */
-extern void init();
+extern void initialisation();
 
 /**
- * @brief Print
+ * @brief Affichage
  */
 extern void show();
 
 /**
- * @brief To spawn a ship
+ * @brief Initialisation du plateau_1
  */
-extern void spawn(Ship *ship);
+extern void plateaux_1();
+/**
+ * @brief Initialisation du plateau_2
+ */
+extern void plateaux_2();
