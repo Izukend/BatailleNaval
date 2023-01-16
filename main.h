@@ -17,7 +17,7 @@ struct Ship {
  * @brief Matrice contenant le plateau
  */
 extern char plateau[10][10];
-
+extern char demiDisplay[10][10];
 /**
  * @brief Création de la grille de base du jeu composée de ~ pour l'eau
  */
@@ -28,6 +28,10 @@ extern void initialisation();
  */
 extern void show();
 
+/**
+ * @brief Affichage in game
+ */
+extern void show_game();
 /**
  * @brief Initialisation du plateau_1
  */
