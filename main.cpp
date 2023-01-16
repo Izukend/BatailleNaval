@@ -2,8 +2,6 @@
 // Created by izukend on 10/01/2023.
 //
 #include <iostream>
-#include <algorithm>
-#include <random>
 #include "./main.h"
 
 using namespace std;
@@ -50,15 +48,15 @@ int main() {
             switch (nbPlateau) {
                 case 1:
                     plateaux_1();
-                    //char plateaux_1[10][10];
-                    char x;
-                    char y;
-                    cout << "Taper les coordonnees x : "<< endl; cin >> x;
-                    cout << "Taper les coordonnees y : " << endl; cin >> y;
-                    if(plateau[x][y] == 0){
+                    int x;
+                    int y;
+                    cout << "Taper les coordonnees de la ligne : " << endl; cin >> x;
+                    cout << "Taper les coordonnees de la colonne : "  << endl; cin >> y;
+                    if(plateau[x][y] != '1'){
                         cout << "Rate" << endl;
                     }else{
                         cout << "Touche" <<endl;
+                        plateau[x][y] = 'X';
                     }
                     show();
 
@@ -68,7 +66,6 @@ int main() {
         }
 
     } else if (play == "no" || play == "n") {
-        cout << "Merci d'avoir jouer !" <<
-             endl;
+        cout << "Merci d'avoir jouer !" << endl;
     }
 }

@@ -8,8 +8,8 @@ using namespace std;
 
 struct Ship {
     string name;
-    int x;
-    int y;
+    int row;
+    int colum;
     int length;
 };
 

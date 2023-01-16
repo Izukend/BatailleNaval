@@ -5,7 +5,7 @@
 #define SIZE 10
 
 using namespace std;
-char plateau[10][10];
+char plateau[SIZE][SIZE];
 int i, j;
 
 void initialisation() {
@@ -16,18 +16,18 @@ void initialisation() {
 }
 
 void show() {
-    printf("  ");
-    for (i = 0; i < 10; i++)
-        printf("%4c", 'A' + i);
+        for (i = 0; i < 10; i++)
+            printf("%4c", 'A' + i);
+           // printf("%4c", plateau[i][j]);
 
-    printf("\n-----------------------------------------------\n");
+        cout << "\n-----------------------------------------------" << endl;
 
-    for (i = 0; i < 10; i++) {
-        printf("%2d", i + 1);
-        for (j = 0; j < 10; j++) {
-            printf("%4c", plateau[i][j]);
+        for (i = 0; i < 10; i++) {
+            cout << i +1;
+            for (j = 0; j < 10; j++) {
+                printf("%4c", plateau[i][j]);
+            }
+            cout << "   " << endl;
         }
-        cout << " " << endl;
+        cout << "\n-----------------------------------------------\n" << endl;
     }
-    printf("-----------------------------------------------\n");
-}
