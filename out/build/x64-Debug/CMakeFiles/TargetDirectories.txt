@@ -1,0 +1,3 @@
+C:/Users/izuke/source/repos/Izukend/BatailleNaval/out/build/x64-Debug/CMakeFiles/BatailleNaval.dir
+C:/Users/izuke/source/repos/Izukend/BatailleNaval/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/izuke/source/repos/Izukend/BatailleNaval/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
