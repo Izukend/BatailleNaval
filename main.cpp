@@ -21,7 +21,7 @@ int main() {
         "| $$\\  $$$ /$$__  $$  \\  $$$/ /$$__  $$| $$      | $$  \\ $$/$$__  $$  | $$ /$$| $$ /$$| $$| $$_____/\n"
         "| $$ \\  $$|  $$$$$$$   \\  $/ |  $$$$$$$| $$      | $$$$$$$/  $$$$$$$  |  $$$$/|  $$$$/| $$|  $$$$$$$\n"
         "|__/  \\__/ \\_______/    \\_/   \\_______/|__/      |_______/ \\_______/   \\___/   \\___/  |__/ \\_______/\n"
-        "By Coulais Tom, Bidard Adeline and Dasilva-Fernandez Enzo"
+        "By Coulais Tom and Bidard Adeline"
         "                                                            \n" << endl;
     cout << "Menu" << endl;
     cout << "Play ? (Yes or No)" << endl;
@@ -82,12 +82,12 @@ int main() {
                         if(plateau[row -1][colum -1] != '1'){
                             demiDisplay[row - 1][colum -1] = 'O';
                             show_game();
-                            cout << "Rate" << endl;
+                            cout << "Rate !" << endl;
                         }else{
                             demiDisplay[row - 1][colum - 1] = 'X';
                             nbX = nbX + 1;
                             show_game();
-                            cout << "Touche" <<endl;
+                            cout << "Touche !" <<endl;
                         }
                     }
                     while(nbX != 17);
