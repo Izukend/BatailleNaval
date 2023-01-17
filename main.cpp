@@ -40,7 +40,6 @@ int main() {
             switch (nbPlateau) {
                 case 1:
                     plateaux_1();
-                    show();
                     do{
                         //Définition de la colonne
                         cout << "Taper les coordonnees de la colonne : "  << endl; cin >> colum2;
