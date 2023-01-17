@@ -27,7 +27,6 @@ int main() {
     cout << "Play ? (Yes or No)" << endl;
 
     string play;
-    string regle;
 
     cin >> play;
 
@@ -35,24 +34,13 @@ int main() {
         initialisation();
         show();
 
-        cout << "Avez vous besoin des regles (Taper oui ou non) ?" << endl;
-        cin >> regle;
-        if (regle =="o" || regle =="oui" || regle == "Oui"){
-
-            cout << "Vous disposez de plusieur plateaux pré définit par le créateur de ce programme."
-                    "Pour gagner vous devrez couler les 5 bateaux sur la grille de jeux." << endl;
-            cout << "La liste des bateaux existant pour ce jeu : \n"
-                    "2 Contre Torpilleurs(3 cases) ; 1 Croiseur(4 cases) ; 1 Porte Avions(5 cases) ; 1 Torpilleur(2 cases)"
-                    "                               " << endl;
-
-        }else if (regle == "n" || regle == "non" || regle == "Non"){
-
             cout << "Veuiller choisir votre plateau de jeu entre 1 et 2" << endl;
             cin >> nbPlateau;
 
             switch (nbPlateau) {
                 case 1:
                     plateaux_1();
+                    show();
                     do{
                         //Définition de la colonne
                         cout << "Taper les coordonnees de la colonne : "  << endl; cin >> colum2;
@@ -98,12 +86,14 @@ int main() {
                             cout << "Rate" << endl;
                         }else{
                             demiDisplay[row - 1][colum - 1] = 'X';
+                            nbX = nbX + 1;
                             show_game();
-                            nbX = nbX+1;
                             cout << "Touche" <<endl;
                         }
                     }
-                    while(nbX != 17); //changer condition
+                    while(nbX != 17);
+                    cout << "Vous avez gagner !" << endl;
+                    break;
                 case 2:
                     plateaux_2();
 
@@ -155,10 +145,12 @@ int main() {
                         }
                     }
                     while(nbX != 17);
+                    cout << "Vous avez gagner !" << endl;
+                    break; //Arêt de la fonction 
             }
         }
-
-    } else if (play == "no" || play == "n") {
+    else if (play == "no" || play == "n") {
         cout << "Merci d'avoir jouer !" << endl;
+
     }
 }
