@@ -9,7 +9,7 @@ using namespace std;
 void plateaux_1(){
     Ship croiseur{"Croiseur", 5, 4, 4};
     Ship porte_avions{"Porte-Avions", 2, 1, 5};
-    Ship torpilleur{"Torpilleur", 5, 7, 2};
+    Ship torpilleur{"Torpilleur", 6, 8, 2};
     Ship contre_torpilleur_1{"Contre_Torpilleur", 2, 4, 3};
     Ship  contre_torpilleur_2{"Torpilleur", 7, 1, 3};
 
